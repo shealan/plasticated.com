@@ -1,71 +1,47 @@
-'use client';
+"use client";
 
-import Head from 'next/head';
-import * as React from 'react';
+import dynamic from "next/dynamic";
+import Head from "next/head";
+import Link from "next/link";
+import * as React from "react";
 
-import ArrowLink from '@/components/links/ArrowLink';
-import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
-import UnstyledLink from '@/components/links/UnstyledLink';
-
-/**
- * SVGR Support
- * Caveat: No React Props Type.
- *
- * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
- */
-import Logo from '~/svg/Logo.svg';
-
-// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
-// Before you begin editing, follow all comments with `STARTERCONF`,
-// to customize the default configuration.
+const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="min-h-screen bg-stone-900 text-white">
       <Head>
         <title>Hi</title>
       </Head>
-      <section className='bg-white'>
-        <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-          <Logo className='w-16' />
-          <h1 className='mt-4'>Next.js + Tailwind CSS + TypeScript Starter</h1>
-          <p className='mt-2 text-sm text-gray-800'>
-            A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-            Import, Seo, Link component, pre-configured with Husky{' '}
-          </p>
-          <p className='mt-2 text-sm text-gray-700'>
-            <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-              See the repository
-            </ArrowLink>
-          </p>
-
-          <ButtonLink className='mt-6' href='/components' variant='light'>
-            See all components
-          </ButtonLink>
-
-          <UnstyledLink
-            href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-            className='mt-4'
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              width='92'
-              height='32'
-              src='https://vercel.com/button'
-              alt='Deploy with Vercel'
-            />
-          </UnstyledLink>
-
-          <footer className='absolute bottom-2 text-gray-700'>
-            © {new Date().getFullYear()} By{' '}
-            <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-              Theodorus Clarence
-            </UnderlineLink>
-          </footer>
+      <header className="relative h-screen w-screen">
+        <div className="absolute inset-0 grid place-content-center">
+          <div className="relative z-10">
+            <div className="animate-glow animate-fade-left hidden h-px w-screen bg-gradient-to-r from-stone-300/0 via-stone-300/50 to-stone-300/0 md:block" />
+            <h1 className="font-headline text-edge-outline animate-title font-display md:text-10xl z-10 cursor-default whitespace-nowrap bg-white bg-clip-text text-center text-5xl font-bold tracking-tight text-transparent duration-1000 sm:text-9xl">
+              plasticated
+            </h1>
+            <div className="animate-glow animate-fade-right hidden h-px w-screen bg-gradient-to-r from-stone-300/0 via-stone-300/50 to-stone-300/0 md:block" />
+            <div className="animate-fade-in mx-auto my-12 max-w-xs text-center md:max-w-md">
+              <h2 className="inline text-sm md:text-lg">
+                Creators of the{" "}
+                <strong className="font-bold">Pose Panel</strong> platform.
+                Deploy cutting edge big-screen augmented reality experiences for
+                your company or brand in record time.{" "}
+                <Link
+                  target="_blank"
+                  href="mailto:contact@plasticated.com"
+                  className="underline underline-offset-2 duration-500"
+                >
+                  Contact us
+                </Link>
+              </h2>
+            </div>
+          </div>
         </div>
-      </section>
+        <div className="absolute inset-0">
+          <ParticlesBg color="#db2777" type="circle" />
+        </div>
+      </header>
     </main>
   );
 }
