@@ -1,7 +1,6 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Head from "next/head";
 import Link from "next/link";
 import * as React from "react";
 
@@ -10,9 +9,6 @@ const ParticlesBg = dynamic(() => import("particles-bg"), { ssr: false });
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-stone-900 text-white">
-      <Head>
-        <title>Hi</title>
-      </Head>
       <header className="relative h-screen w-screen">
         <div className="absolute inset-0 grid place-content-center">
           <div className="relative z-10">
@@ -25,8 +21,8 @@ export default function HomePage() {
               <h2 className="inline text-sm md:text-lg">
                 Creators of the{" "}
                 <strong className="font-bold">Pose Panel</strong> platform.
-                Deploy cutting edge big-screen augmented reality experiences for
-                your company or brand in record time.{" "}
+                Deploy cutting edge, big-screen augmented reality experiences
+                for your company or brand in record time.{" "}
                 <Link
                   target="_blank"
                   href="mailto:contact@plasticated.com"
