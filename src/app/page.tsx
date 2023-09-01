@@ -20,8 +20,8 @@ export default function HomePage() {
             <div className="animate-fade-in mx-auto my-12 max-w-xs text-center md:max-w-md">
               <h2 className="inline text-sm md:text-lg">
                 Creators of the{" "}
-                <strong className="font-bold">Pose Panel</strong> platform.
-                Deploy cutting edge, big-screen augmented reality experiences
+                <strong className="font-bold">Pose Panel</strong> platform:
+                Deploy cutting-edge, big-screen augmented reality experiences
                 for your company or brand in record time.{" "}
                 <Link
                   target="_blank"
