@@ -21,8 +21,8 @@ export default function HomePage() {
               <h2 className="inline text-sm md:text-lg">
                 Creators of the{" "}
                 <strong className="font-bold">Pose Panel</strong> platform:
-                Deploy cutting-edge, big-screen augmented reality experiences
-                for your company or brand in record time.{" "}
+                Deploy cutting-edge, big-screen augmented reality experiences in
+                record time.{" "}
                 <Link
                   target="_blank"
                   href="mailto:contact@plasticated.com"
