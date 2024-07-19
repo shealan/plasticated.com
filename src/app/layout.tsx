@@ -44,6 +44,12 @@ export default function RootLayout({
   return (
     <html>
       <body>{children}</body>
+      <script
+        defer
+        src="https://api.pirsch.io/pa.js"
+        id="pianjs"
+        data-code="gy5qzeKOi48yojDuclTt8uOMpk8d40Zj"
+      ></script>
     </html>
   );
 }
